@@ -1,0 +1,6 @@
+/* Bootstrap Grid Customization if needed */
+/* We are using CDN for bootstrap grid, but this file is reserved for grid overrides */
+.row {
+    --bs-gutter-x: 2rem;
+    --bs-gutter-y: 2rem;
+}
