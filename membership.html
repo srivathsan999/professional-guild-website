@@ -47,10 +47,12 @@
                 </button>
                 <a href="login.html" class="btn btn-outline">Login</a>
                 <a href="signup.html" class="btn btn-primary">Signup</a>
-                            
-                            <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle Menu">
+
+                <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle Menu">
                     <i class="fa-solid fa-bars"></i>
-                </button></div></div>
+                </button>
+            </div>
+        </div>
     </nav>
 
     <!-- Header -->
@@ -65,9 +67,9 @@
     <!-- Pricing / Tiers -->
     <section class="section">
         <div class="container">
-            <div class="row animate-stagger-list">
+            <div class="row animate-stagger-list" style="display: flex; flex-wrap: wrap;">
                 <!-- Student -->
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-6" style="margin-bottom: 2rem;">
                     <div class="card" style="text-align: center; height: 100%; display: flex; flex-direction: column;">
                         <h3 style="color: var(--text-secondary); font-size: 1.5rem;">Student</h3>
                         <div
@@ -86,9 +88,9 @@
                 </div>
 
                 <!-- Professional -->
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-6" style="margin-bottom: 2rem;">
                     <div class="card"
-                        style="text-align: center; border: 2px solid var(--accent); transform: scale(1.05); z-index: 10;">
+                        style="text-align: center; border: 2px solid var(--accent); height: 100%; display: flex; flex-direction: column; position: relative;">
                         <div
                             style="background-color: var(--accent); color: white; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; padding: 0.2rem 0; border-radius: 4px 4px 0 0; margin: -1.5rem -1.5rem 1.5rem;">
                             Recommended</div>
@@ -112,7 +114,7 @@
                 </div>
 
                 <!-- Fellow -->
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-6" style="margin-bottom: 2rem;">
                     <div class="card" style="text-align: center; height: 100%; display: flex; flex-direction: column;">
                         <h3 style="color: var(--text-secondary); font-size: 1.5rem;">Fellow</h3>
                         <div
@@ -152,8 +154,10 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <h3><i class="fa-solid fa-scale-balanced"></i> GUILD</h3>
-                    <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.6;">
+                    <a href="index.html" class="logo">
+                        <i class="fa-solid fa-scale-balanced"></i> GUILD
+                    </a>
+                    <p>
                         The Professional Guild represents the gold standard in industry practice. We are dedicated to
                         the advancement of our members and the protection of the public.
                     </p>
@@ -176,7 +180,7 @@
                     <h3>Resources</h3>
                     <ul class="footer-links">
                         <li><a href="events.html">Events Calendar</a></li>
-                <li><a href="blog.html">Industry News</a></li>
+                        <li><a href="blog.html">Industry News</a></li>
                     </ul>
                 </div>
                 <div>
@@ -195,11 +199,11 @@
         </div>
     </footer>
 
-    
-    
-    
-    
-    
+
+
+
+
+
     <!-- Mobile Side Menu -->
     <div id="mobile-side-menu" class="mobile-side-menu">
         <div class="mobile-menu-header">
@@ -207,13 +211,13 @@
             <button id="mobile-menu-close" class="mobile-menu-close">&times;</button>
         </div>
         <nav class="mobile-nav">
-                    <div class="mobile-dropdown-group">
-            <button class="mobile-dropdown-toggle">Home <i class="fa-solid fa-chevron-down"></i></button>
-            <div class="mobile-submenu">
-                <a href="index.html" class="nav-link">Home 1</a>
-                <a href="home-2.html" class="nav-link">Home 2</a>
+            <div class="mobile-dropdown-group">
+                <button class="mobile-dropdown-toggle">Home <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="mobile-submenu">
+                    <a href="index.html" class="nav-link">Home 1</a>
+                    <a href="home-2.html" class="nav-link">Home 2</a>
+                </div>
             </div>
-        </div>
             <a href="about.html" class="nav-link">About</a>
             <a href="membership.html" class="nav-link">Membership</a>
             <a href="events.html" class="nav-link">Events</a>
@@ -237,13 +241,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-

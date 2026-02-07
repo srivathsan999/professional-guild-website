@@ -14,6 +14,12 @@
     --text-secondary: #6B7280;
     --border-color: #E2E8F0;
 
+    /* Footer - Light Mode */
+    --footer-bg: var(--surface);
+    --footer-text: var(--text-primary);
+    --footer-link: var(--text-secondary);
+    --footer-border: var(--border-color);
+
     /* Typography */
     --font-heading: 'Merriweather', serif;
     --font-body: 'Inter', sans-serif;
@@ -41,6 +47,12 @@
     --text-primary: #F1F5F9;
     --text-secondary: #94A3B8;
     --border-color: #334155;
+
+    /* Footer - Dark Mode */
+    --footer-bg: #0c111d;
+    --footer-text: #F1F5F9;
+    --footer-link: #94A3B8;
+    --footer-border: rgba(255, 255, 255, 0.05);
 
     --glass-bg: rgba(15, 23, 42, 0.8);
     --glass-border: rgba(255, 255, 255, 0.1);
@@ -125,6 +137,35 @@ img {
     color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Events */
+.event-card {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .event-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .event-card>div {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .btn {
@@ -341,10 +382,11 @@ img {
 
 /* Footer */
 .footer {
-    background-color: #1E293B;
-    color: #F8FAFC;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
     padding: 5rem 0 2rem;
     margin-top: auto;
+    border-top: 1px solid var(--border-color);
 }
 
 .footer-grid {
@@ -355,17 +397,31 @@ img {
 }
 
 .footer h3 {
-    color: white;
-    font-size: 1.2rem;
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer .logo {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.footer p {
+    color: var(--footer-link);
+    font-size: 0.9rem;
+    line-height: 1.6;
     margin-bottom: 1.5rem;
 }
 
 .footer-links li {
     margin-bottom: 0.8rem;
+    color: var(--footer-link);
 }
 
 .footer-links a {
-    color: #94A3B8;
+    color: var(--footer-link);
 }
 
 .footer-links a:hover {
@@ -381,13 +437,18 @@ img {
 .social-icons a {
     color: white;
     font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+.social-icons a:hover {
+    color: var(--accent);
 }
 
 .copyright {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: #94A3B8;
+    border-top: 1px solid var(--footer-border);
+    color: var(--footer-link);
     font-size: 0.9rem;
 }
 
@@ -908,4 +969,87 @@ img {
 
 .mobile-dropdown-toggle.active i {
     transform: rotate(180deg);
+}
+
+/* Alternative Hero (Home-2) */
+.hero-alt {
+    padding: 8rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, var(--neutral-bg) 0%, rgba(30, 58, 95, 0.05) 100%);
+}
+
+.hero-alt .establishment {
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.hero-alt h1 {
+    font-size: 4rem;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-alt p {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.hero-alt .btn-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+@media (max-width: 991px) {
+    .hero-alt {
+        padding: 6rem 0;
+    }
+
+    .hero-alt h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-alt {
+        padding: 4rem 1rem;
+    }
+
+    .hero-alt h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-alt p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-alt .btn-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .hero-alt .btn-group .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-alt h1 {
+        font-size: 2rem;
+        word-break: break-word;
+    }
+
+    .hero-alt p {
+        font-size: 1rem;
+    }
 }
