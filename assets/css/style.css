@@ -37,10 +37,12 @@
 
 [data-theme="dark"] {
     /* Color Palette - Dark Mode */
-    --primary: #3B82F6;
+    --primary: #4B7BB6;
+    /* Lighter version of brand primary #1E3A5F for contrast */
     /* Adjusted for dark mode visibility */
-    --primary-rgb: 59, 130, 246;
-    --accent: #D4AF37;
+    --primary-rgb: 75, 123, 182;
+    --accent: #E5C353;
+    /* Lighter version of brand accent #C9A227 */
     --neutral-bg: #0F172A;
     --surface: #1E293B;
     /* Slightly lighter than bg for cards */
